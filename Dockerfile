@@ -6,8 +6,8 @@ RUN apk update && apk add /bin/sh
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
 
-COPY target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo.jar
+COPY target/onlinebookstore.jar $PROJECT_HOME/onlinebookstore.jar
 
 WORKDIR $PROJECT_HOME
-EXPOSE 8080
-CMD ["java" ,"-jar","./spring-boot-mongo.jar"]
+EXPOSE 8082
+CMD ["java" ,"-jar","./onlinebookstore.jar"]
